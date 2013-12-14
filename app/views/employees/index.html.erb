@@ -5,7 +5,8 @@
     <tr>
       <th>First Name</th>
       <th>Last Name</th>
-     <th>Email</th>
+      <th>Email</th>
+      <th>Sales</th>
     </tr>
   </thead>
 
@@ -15,6 +16,7 @@
         <td><%= employee.first_name %></td>
         <td><%= employee.last_name %></td>
         <td><%= mail_to employee.email %></td>
+        <td><%= link_to "Sales", employee %></td>
       </tr>
     <% end %>
   </tbody>

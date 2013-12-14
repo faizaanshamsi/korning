@@ -1,0 +1,9 @@
+<h1><%= @employee.first_name %> <%= @employee.last_name %></h1>
+<h2>Email: <%= mail_to @employee.email %> </h2>
+<ul>
+  <% @employee.sales.order("sale_amount DESC").each do |sale| %>
+    <li>$<%= sale.sale_amount %></li>
+  <% end %>
+</ul>
+
+<!-- TODO: put more info about each sale and link to sale show page -->
