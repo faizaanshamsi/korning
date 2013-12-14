@@ -1,0 +1,9 @@
+<h1>Customers</h1>
+
+<ul>
+<% @customer_and_account_nos.each do |customer| %>
+
+  <li><%= link_to customer.company, customer %></li>
+
+<% end %>
+</ul>

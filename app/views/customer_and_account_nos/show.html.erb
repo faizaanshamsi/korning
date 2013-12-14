@@ -1,0 +1,7 @@
+<h1><%= @customer_and_account_no.company%></h1>
+
+<ul>
+  <li>Account Number: <%= @customer_and_account_no.account_number%></li>
+  <li>Website: <%= link_to "#{@customer_and_account_no.website.downcase}", "#{@customer_and_account_no.website}"%></li>
+  <li>Invoice Frequency: <%= @customer_and_account_no.display_invoice_frequency%></li>
+</ul>
