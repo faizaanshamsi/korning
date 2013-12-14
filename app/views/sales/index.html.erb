@@ -1,0 +1,26 @@
+<h1>Sales Last 13 Months</h1>
+<table>
+
+  <thead>
+  <tr>
+    <th>Invoice Number</th>
+    <th>Sales Date</th>
+    <th>Units Sold</th>
+    <th>Sales Amount</th>
+    <th>Price per Unit</th>
+  </tr>
+  </thead>
+
+  <tbody>
+    <% Sale.month_sales(13).each do |sale| %>
+    <tr>
+      <td><%= sale.invoice_no%></td>
+      <td><%= sale.sale_date%></td>
+      <td><%= sale.units_sold%></td>
+      <td>$<%= sale.sale_amount%></td>
+      <td>$<%= sale.price_per_unit%></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
