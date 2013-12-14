@@ -9,6 +9,7 @@ class AddCustomerAndAccountNoIdToSales < ActiveRecord::Migration
 
   def down
     remove_column :sales, :customer_and_account_no_id
+    CustomerAndAccountNo.delete_all
   end
 
   def populate_customer_and_account_no
